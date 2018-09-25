@@ -19,7 +19,6 @@ Upload Image 3 files
 *** Keywords ***
 Select file
     [Arguments]   ${filename}
-    
     Choose File   
     ...  xpath://div/div[2]/div[1]/input[2]
     ...  ${CURDIR}/${filename}
