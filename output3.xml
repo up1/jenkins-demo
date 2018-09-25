@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180925 13:51:05.893" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group3" id="s1" name="Group3">
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group3/rdserver.robot" id="s1-s1" name="Rdserver">
+<test id="s1-s1-t1" name="ยื่นแบบ online ไม่ได้">
+<kw name="Open tax online page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://rdserver.rd.go.th/publish/index.php?page=taxonline</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20180925 13:51:06.005" level="INFO">Opening browser 'chrome' to base url 'https://rdserver.rd.go.th/publish/index.php?page=taxonline'.</msg>
+<status status="PASS" endtime="20180925 13:51:08.442" starttime="20180925 13:51:06.005"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:08.442" starttime="20180925 13:51:06.005"></status>
+</kw>
+<kw name="Open manual of compatability view setting">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>xpath://*[@id="lightboxdialog"]/p/iframe</arg>
+</arguments>
+<msg timestamp="20180925 13:51:08.443" level="INFO">Selecting frame 'xpath://*[@id="lightboxdialog"]/p/iframe'.</msg>
+<status status="PASS" endtime="20180925 13:51:08.470" starttime="20180925 13:51:08.443"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>คลิก</arg>
+</arguments>
+<msg timestamp="20180925 13:51:08.470" level="INFO">Clicking link 'คลิก'.</msg>
+<status status="PASS" endtime="20180925 13:51:08.613" starttime="20180925 13:51:08.470"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:08.614" starttime="20180925 13:51:08.443"></status>
+</kw>
+<kw name="Close warning popup">
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<status status="PASS" endtime="20180925 13:51:08.639" starttime="20180925 13:51:08.614"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="lightboxdialog"]/button</arg>
+</arguments>
+<msg timestamp="20180925 13:51:08.640" level="INFO">Clicking element 'xpath://*[@id="lightboxdialog"]/button'.</msg>
+<status status="PASS" endtime="20180925 13:51:08.769" starttime="20180925 13:51:08.639"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:08.769" starttime="20180925 13:51:08.614"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:08.770" critical="yes" starttime="20180925 13:51:06.004"></status>
+</test>
+<status status="PASS" endtime="20180925 13:51:08.771" starttime="20180925 13:51:05.912"></status>
+</suite>
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group3/upload.robot" id="s1-s2" name="Upload">
+<test id="s1-s2-t1" name="Upload Image 3 files">
+<kw name="Open upload page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20180925 13:51:08.779" level="INFO">Opening browser 'chrome' to base url 'http://nervgh.github.io/pages/angular-file-upload/examples/simple/'.</msg>
+<status status="PASS" endtime="20180925 13:51:11.508" starttime="20180925 13:51:08.779"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.509" starttime="20180925 13:51:08.778"></status>
+</kw>
+<kw name="Select file">
+<arguments>
+<arg>image1.jpg</arg>
+</arguments>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>xpath://div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group3/${filename}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:11.540" starttime="20180925 13:51:11.510"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.541" starttime="20180925 13:51:11.509"></status>
+</kw>
+<kw name="Select file">
+<arguments>
+<arg>image2.jpg</arg>
+</arguments>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>xpath://div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group3/${filename}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:11.561" starttime="20180925 13:51:11.541"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.561" starttime="20180925 13:51:11.541"></status>
+</kw>
+<kw name="Select file">
+<arguments>
+<arg>image3.jpg</arg>
+</arguments>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>xpath://div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group3/${filename}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:11.578" starttime="20180925 13:51:11.561"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.578" starttime="20180925 13:51:11.561"></status>
+</kw>
+<kw name="Selected file should have 3 files">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:11.588" starttime="20180925 13:51:11.579"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr</arg>
+<arg>limit=3</arg>
+</arguments>
+<msg timestamp="20180925 13:51:11.595" level="INFO">Current page contains 3 element(s).</msg>
+<status status="PASS" endtime="20180925 13:51:11.595" starttime="20180925 13:51:11.588"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.595" starttime="20180925 13:51:11.578"></status>
+</kw>
+<kw name="Upload file">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[${order no}]/td[5]/button[1]</arg>
+</arguments>
+<msg timestamp="20180925 13:51:11.596" level="INFO">Clicking element 'xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[1]/td[5]/button[1]'.</msg>
+<status status="PASS" endtime="20180925 13:51:11.662" starttime="20180925 13:51:11.596"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.662" starttime="20180925 13:51:11.595"></status>
+</kw>
+<kw name="Upload file">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[${order no}]/td[5]/button[1]</arg>
+</arguments>
+<msg timestamp="20180925 13:51:11.663" level="INFO">Clicking element 'xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[2]/td[5]/button[1]'.</msg>
+<status status="PASS" endtime="20180925 13:51:11.712" starttime="20180925 13:51:11.663"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.712" starttime="20180925 13:51:11.662"></status>
+</kw>
+<kw name="Upload file">
+<arguments>
+<arg>3</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[${order no}]/td[5]/button[1]</arg>
+</arguments>
+<msg timestamp="20180925 13:51:11.712" level="INFO">Clicking element 'xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[3]/td[5]/button[1]'.</msg>
+<status status="PASS" endtime="20180925 13:51:11.761" starttime="20180925 13:51:11.712"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.762" starttime="20180925 13:51:11.712"></status>
+</kw>
+<kw name="Upload should be succeed">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[@style="width: 100%;"]</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:11.980" starttime="20180925 13:51:11.762"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.980" starttime="20180925 13:51:11.762"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:11.980" critical="yes" starttime="20180925 13:51:08.778"></status>
+</test>
+<status status="PASS" endtime="20180925 13:51:11.981" starttime="20180925 13:51:08.773"></status>
+</suite>
+<status status="PASS" endtime="20180925 13:51:11.982" starttime="20180925 13:51:05.895"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Group3" pass="2">Group3</stat>
+<stat fail="0" id="s1-s1" name="Rdserver" pass="1">Group3.Rdserver</stat>
+<stat fail="0" id="s1-s2" name="Upload" pass="1">Group3.Upload</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

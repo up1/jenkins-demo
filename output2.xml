@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180925 13:51:43.590" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group2" id="s1" name="Group2">
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group2/Customer.robot" id="s1-s1" name="Customer">
+<test id="s1-s1-t1" name="Test 1">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>email=somkiat@gmail.com</arg>
+<arg>mobile_no=0868696209</arg>
+</arguments>
+<assign>
+<var>&amp;{user_info}</var>
+</assign>
+<msg timestamp="20180925 13:51:43.613" level="INFO">&amp;{user_info} = { email=somkiat@gmail.com | mobile_no=0868696209 }</msg>
+<status status="PASS" endtime="20180925 13:51:43.613" starttime="20180925 13:51:43.613"></status>
+</kw>
+<kw name="Fill in customer information">
+<arguments>
+<arg>${user_info}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.email}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.614" starttime="20180925 13:51:43.614"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.mobile_no}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.614" starttime="20180925 13:51:43.614"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.614" starttime="20180925 13:51:43.613"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.615" critical="yes" starttime="20180925 13:51:43.612"></status>
+</test>
+<test id="s1-s1-t2" name="Test 2">
+<kw name="Fill in customer information">
+<arguments>
+<arg>${user_info_1}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.email}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.616" starttime="20180925 13:51:43.615"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.mobile_no}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.616" starttime="20180925 13:51:43.616"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.616" starttime="20180925 13:51:43.615"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.616" critical="yes" starttime="20180925 13:51:43.615"></status>
+</test>
+<status status="PASS" endtime="20180925 13:51:43.616" starttime="20180925 13:51:43.607"></status>
+</suite>
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group2/read_file.robot" id="s1-s2" name="Read File">
+<test id="s1-s2-t1" name="Try to write dictionary data to csv file">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>email=somkiat@gmail.com</arg>
+<arg>mobile_no=0868696209</arg>
+</arguments>
+<assign>
+<var>&amp;{user_info}</var>
+</assign>
+<msg timestamp="20180925 13:51:43.620" level="INFO">&amp;{user_info} = { email=somkiat@gmail.com | mobile_no=0868696209 }</msg>
+<status status="PASS" endtime="20180925 13:51:43.620" starttime="20180925 13:51:43.620"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${user_info}</arg>
+<arg>${user_info}</arg>
+</arguments>
+<assign>
+<var>@{all data}</var>
+</assign>
+<msg timestamp="20180925 13:51:43.620" level="INFO">@{all data} = [ {u'email': u'somkiat@gmail.com', u'mobile_no': u'0868696209'} | {u'email': u'somkiat@gmail.com', u'mobile_no': u'0868696209'} ]</msg>
+<status status="PASS" endtime="20180925 13:51:43.621" starttime="20180925 13:51:43.620"></status>
+</kw>
+<kw name="Write Data" library="CsvLibrary">
+<arguments>
+<arg>${all data}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.621" starttime="20180925 13:51:43.621"></status>
+</kw>
+<tags>
+<tag>dev</tag>
+</tags>
+<status status="PASS" endtime="20180925 13:51:43.621" critical="yes" starttime="20180925 13:51:43.619"></status>
+</test>
+<test id="s1-s2-t2" name="Try to read from user.csv with for loop">
+<kw name="Read Data" library="CsvLibrary">
+<arguments>
+<arg>user.csv</arg>
+</arguments>
+<assign>
+<var>${users}</var>
+</assign>
+<msg timestamp="20180925 13:51:43.622" level="INFO">${users} = [['user1', 'password1'], ['user2', 'password2'], ['user3', 'password3']]</msg>
+<status status="PASS" endtime="20180925 13:51:43.622" starttime="20180925 13:51:43.622"></status>
+</kw>
+<kw type="for" name="${data} IN [ @{users} ]">
+<kw type="foritem" name="${data} = ['user1', 'password1']">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${data[0]}=${data[1]}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.623" starttime="20180925 13:51:43.622"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.623" starttime="20180925 13:51:43.622"></status>
+</kw>
+<kw type="foritem" name="${data} = ['user2', 'password2']">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${data[0]}=${data[1]}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.623" starttime="20180925 13:51:43.623"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.623" starttime="20180925 13:51:43.623"></status>
+</kw>
+<kw type="foritem" name="${data} = ['user3', 'password3']">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${data[0]}=${data[1]}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.624" starttime="20180925 13:51:43.623"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.624" starttime="20180925 13:51:43.623"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.624" starttime="20180925 13:51:43.622"></status>
+</kw>
+<tags>
+<tag>testing</tag>
+</tags>
+<status status="PASS" endtime="20180925 13:51:43.624" critical="yes" starttime="20180925 13:51:43.621"></status>
+</test>
+<test id="s1-s2-t3" name="Try to read from user.csv">
+<kw name="Read Data" library="CsvLibrary">
+<arguments>
+<arg>user.csv</arg>
+</arguments>
+<assign>
+<var>${users}</var>
+</assign>
+<msg timestamp="20180925 13:51:43.625" level="INFO">${users} = [['user1', 'password1'], ['user2', 'password2'], ['user3', 'password3']]</msg>
+<status status="PASS" endtime="20180925 13:51:43.625" starttime="20180925 13:51:43.625"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>User=${users[0][0]}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.625" starttime="20180925 13:51:43.625"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Pass=${users[0][1]}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:43.626" starttime="20180925 13:51:43.625"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:43.626" critical="yes" starttime="20180925 13:51:43.624"></status>
+</test>
+<status status="PASS" endtime="20180925 13:51:43.626" starttime="20180925 13:51:43.617"></status>
+</suite>
+<status status="PASS" endtime="20180925 13:51:43.627" starttime="20180925 13:51:43.591"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">dev</stat>
+<stat fail="0" pass="1">testing</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Group2" pass="5">Group2</stat>
+<stat fail="0" id="s1-s1" name="Customer" pass="2">Group2.Customer</stat>
+<stat fail="0" id="s1-s2" name="Read File" pass="3">Group2.Read File</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

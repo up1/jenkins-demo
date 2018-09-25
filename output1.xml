@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180925 13:51:36.929" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group1" id="s1" name="Group1">
+<suite source="/Users/somkiat/data/slide/robotframework/workshop/swpark20180924/group1/calculator.robot" id="s1-s1" name="Calculator">
+<test id="s1-s1-t1" name="Add 2 and 3 = 5">
+<kw name="Add" library="calculator">
+<arguments>
+<arg>${2}</arg>
+<arg>${3}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20180925 13:51:36.953" level="INFO">${result} = 5</msg>
+<status status="PASS" endtime="20180925 13:51:36.953" starttime="20180925 13:51:36.952"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:36.953" starttime="20180925 13:51:36.953"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${5}</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:51:36.954" starttime="20180925 13:51:36.953"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>5</arg>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20180925 13:51:36.954" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'int'&gt;</msg>
+<status status="PASS" endtime="20180925 13:51:36.954" starttime="20180925 13:51:36.954"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:51:36.955" critical="yes" starttime="20180925 13:51:36.952"></status>
+</test>
+<status status="PASS" endtime="20180925 13:51:36.955" starttime="20180925 13:51:36.949"></status>
+</suite>
+<status status="PASS" endtime="20180925 13:51:36.955" starttime="20180925 13:51:36.932"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Group1" pass="1">Group1</stat>
+<stat fail="0" id="s1-s1" name="Calculator" pass="1">Group1.Calculator</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
